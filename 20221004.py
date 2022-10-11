@@ -52,21 +52,21 @@ try:
     while True:
         #print(adc1()*3.3/256)
         #print(adc2()*3.3/256)
-        if adc1()/256=1:
+        if adc1()/256==1:
             GPIO.output(leds, [1,1,1,1,1,1,1,1])
-        elif 7/8=<adc1()/256<1:
+        elif adc1()/256>=7/8 and adc1()/256<1:
             GPIO.output(leds, [0,1,1,1,1,1,1,1])
-        elif 6/8=<adc1()/256<7/8:
+        elif adc1()/256>=6/8 and adc1()/256<7/8:
             GPIO.output(leds, [0,0,1,1,1,1,1,1])
-        elif 5/8=<adc1()/256<6/8:
+        elif adc1()/256>=5/8 and adc1()/256<6/8:
             GPIO.output(leds, [0,0,0,1,1,1,1,1])
-        elif 4/8=<adc1()/256<5/8:
+        elif adc1()/256>=4/8 and adc1()/256<5/8:
             GPIO.output(leds, [0,0,0,0,1,1,1,1])
-        elif 3/8=<adc1()/256<4/8:
+        elif adc1()/256>=3/8 and adc1()/256<4/8:
             GPIO.output(leds, [0,0,0,0,0,1,1,1])
-        elif 2/8=<adc1()/256<3/8:
+        elif adc1()/256>=2/8 and adc1()/256<3/8:
             GPIO.output(leds, [0,0,0,0,0,0,1,1])
-        elif 1/8=<adc1()/256<2/8:
+        elif adc1()/256>=1/8 and adc1()/256<2/8:
             GPIO.output(leds, [0,0,0,0,0,0,0,1])
         else:
             GPIO.output(leds, [0,0,0,0,0,0,0,0])
